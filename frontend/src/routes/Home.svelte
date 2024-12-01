@@ -78,9 +78,4 @@
         </p>
         <a use:link href="/contact" class="btn btn-outline-success btn-lg">문의하기</a>
     </section>
-
-    <!-- Footer -->
-    <footer class="text-center mt-5">
-        <p class="text-muted small">© 2024 BOmBzOO's Plasma Farm. 모든 권리 보유.</p>
-    </footer>
 </div>

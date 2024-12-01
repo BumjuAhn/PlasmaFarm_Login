@@ -37,3 +37,5 @@ uvicorn==0.22.0
 # uvloop==0.17.0
 watchfiles==0.18.0
 websockets==10.3
+psycopg2-binary
+# postgresql-client

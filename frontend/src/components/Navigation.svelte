@@ -32,7 +32,16 @@
                         <a use:link class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a use:link class="nav-link" href="/control">Control</a>
+                    </li>
+                    <li class="nav-item">
                         <a use:link class="nav-link" href="/board">Board</a>
+                    </li>
+                    <li class="nav-item">
+                        <a use:link class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a use:link class="nav-link" href="/contact">Contact</a>
                     </li>
                 {:else}
                     <li class="nav-item">
@@ -45,7 +54,16 @@
                         <a use:link class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a use:link class="nav-link" href="/control">Control</a>
+                    </li>
+                    <li class="nav-item">
                         <a use:link class="nav-link" href="/board">Board</a>
+                    </li>
+                    <li class="nav-item">
+                        <a use:link class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a use:link class="nav-link" href="/contact">Contact</a>
                     </li>
                 {/if}
             </ul>
