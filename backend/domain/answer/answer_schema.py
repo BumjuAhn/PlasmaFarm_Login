@@ -24,7 +24,8 @@ class Answer(BaseModel):
     voter: List[User] = []
 
     class Config:
-        orm_mode = True
+        # orm_mode = True
+        from_attributes = True
 
 # class Answer(BaseModel):
 #     id: int

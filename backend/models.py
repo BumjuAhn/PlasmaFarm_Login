@@ -54,28 +54,28 @@ class User(Base):
     email = Column(String, unique=True, nullable=False)
 
 class TuyaInfo(Base):
-    __tablename__ = "tuyainfo"
+    __tablename__ = "tuya_info"
 
     id = Column(Integer, primary_key=True)
     user_id = Column(Integer, ForeignKey("user.id"), nullable=True)
-    access_id = Column(String, unique=True, nullable=False)
-    access_key = Column(String, nullable=False)
-    api_endpoint = Column(String, nullable=False)
-    access_token = Column(String, nullable=False)
-    expire_time = Column(Integer, nullable=False)
-    refresh_token = Column(String, nullable=False)
-    uid = Column(String, nullable=False)
-    success = Column(Integer, nullable=False)
-    t = Column(Integer, nullable=False)
-    tid = Column(String, nullable=False)
-    create_date = Column(DateTime, nullable=False)
+    access_id = Column(String, unique=True, nullable=True)
+    access_key = Column(String, nullable=True)
+    api_endpoint = Column(String, nullable=True)
+    access_token = Column(String, nullable=True)
+    expire_time = Column(Integer, nullable=True)
+    refresh_token = Column(String, nullable=True)
+    uid = Column(String, nullable=True)
+    success = Column(Integer, nullable=True)
+    t = Column(Integer, nullable=True)
+    tid = Column(String, nullable=True)
+    create_date = Column(DateTime, nullable=True)
 
 class Tuya8in1(Base):
-    __tablename__ = "tuya8in1"
+    __tablename__ = "tuya_8in1"
 
     id = Column(Integer, primary_key=True)
     user_id = Column(Integer, ForeignKey("user.id"), nullable=True)
-    create_date = Column(DateTime, nullable=False)
+    create_date = Column(DateTime, nullable=True)
     temp_current = Column(Integer, nullable=True)
     ph_current = Column(Integer, nullable=True)
     tds_current = Column(Integer, nullable=True)
@@ -87,11 +87,25 @@ class Tuya8in1(Base):
     t = Column(Integer, nullable=True)
 
 class HeyhomeInfo(Base):
-    __tablename__ = "heyhomeinfo"
+    __tablename__ = "heyhome_info"
 
     id = Column(Integer, primary_key=True)
-    access_id = Column(String, unique=True, nullable=False)
-    access_key = Column(String, nullable=False)
-    api_endpoint = Column(String, nullable=False)
-    create_date = Column(DateTime, nullable=False)
+    client_id = Column(String, unique=True, nullable=True)
+    client_secret = Column(String, nullable=True)
+    app_key = Column(String, nullable=True)
+    grant_type = Column(String, nullable=True)
+    username = Column(String, nullable=True)
+    password = Column(String, nullable=True)
+    redirectUri = Column(String, nullable=True)
+    api_endpoint = Column(String, nullable=True)
+    create_date = Column(DateTime, nullable=True)
+    access_token = Column(String, nullable=True)
+    token_type = Column(String, nullable=True)
+    refresh_token = Column(String, nullable=True)
+    expires_in = Column(Integer, nullable=True)
+    scope = Column(String, nullable=True)
+    issued_at = Column(DateTime, nullable=True)
     user_id = Column(Integer, ForeignKey("user.id"), nullable=True)
+
+
+

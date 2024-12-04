@@ -1,0 +1,10 @@
+{
+    "client_id": "b543986409c54ab2bd67ebb5bea88796",
+    "client_secret": "a95c958c7e4c488b99a44c284f25c14b",
+    "app_key": "2gh7YVc2sOMRu2cR-fRvL3j_ROxmFdE-dJAOoh6nL51=",
+    "username": "01021084601",
+    "password": "Ninjurin28",
+    "redirectUri": "http://localhost:3000/callback",
+    "base_url": "https://goqual.io/openapi"
+}
+

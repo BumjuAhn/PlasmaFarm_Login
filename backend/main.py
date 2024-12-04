@@ -6,8 +6,20 @@ from starlette.staticfiles import StaticFiles
 from domain.answer import answer_router
 from domain.question import question_router
 from domain.user import user_router
+from heyhome import heyhome_router
+from tuya import tuya_router
 
-app = FastAPI()
+app = FastAPI(
+    swagger_ui_parameters={"persistAuthorization": True} # 인증 유지 활성화
+    )
+
+@app.on_event("startup")
+async def startup():
+    print("Application is starting")
+
+@app.on_event("shutdown")
+async def shutdown():
+    print("Application is shutting down")
 
 origins = [
     "http://127.0.0.1:5173",  # Svelte
@@ -33,6 +45,8 @@ app.add_middleware(
 app.include_router(question_router.router)
 app.include_router(answer_router.router)
 app.include_router(user_router.router)
+app.include_router(heyhome_router.router)
+app.include_router(tuya_router.router)
 app.mount("/assets", StaticFiles(directory="../frontend/dist/assets"))
 
 

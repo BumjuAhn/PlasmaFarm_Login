@@ -31,7 +31,8 @@ class Question(BaseModel):
     voter: List[User] = []
 
     class Config:
-        orm_mode = True
+        # orm_mode = True
+        from_attributes = True
 
 class QuestionCreate(BaseModel):
     subject: str
